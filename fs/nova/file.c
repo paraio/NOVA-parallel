@@ -836,13 +836,16 @@ ssize_t nova_cow_file_write(struct file *filp,
 	struct address_space *mapping = filp->f_mapping;
 	struct inode *inode = mapping->host;
 	int ret;
+	timing_t inode_lock_time;
 
 	if (len == 0)
 		return 0;
 	
 	sb_start_write(inode->i_sb);
+	NOVA_START_TIMING(inode_lock_t, inode_lock_time);
 	inode_lock(inode);
 
+	NOVA_END_TIMING(inode_lock_t, inode_lock_time);
 	ret = do_nova_cow_file_write(filp, buf, len, ppos);
 
 	inode_unlock(inode);

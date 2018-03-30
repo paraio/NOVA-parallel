@@ -133,6 +133,7 @@ enum timing_category {
 	evict_inode_t,
 	perf_t,
 	wprotect_t,
+	inode_lock_t,
 
 	/* Mmap */
 	mmap_title_t,
