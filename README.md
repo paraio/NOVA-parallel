@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NOVA: NOn-Volatile memory Accelerated log-structured file system
 
 NOVA's goal is to provide a high-performance, full-featured, production-ready
@@ -175,3 +176,7 @@ If you have other questions or suggestions you can contact the NOVA developers a
 [FAST2016]: https://www.usenix.org/conference/fast16/technical-sessions
 [CSE]: http://cs.ucsd.edu
 [UCSD]: http://www.ucsd.edu
+=======
+# NOVA-parallel
+This is parallel version of NOVA filesystem.
+>>>>>>> ce2d41365abdcf5314b08672c279e4c4d9574c15
